@@ -57,6 +57,7 @@ input {
         width: 390px;
         
     }
+    
     .btn {
         margin-left: 70px;
     }
@@ -79,12 +80,13 @@ input {
         width: 345px;
         margin-left: -35px;
         height: 530px;
-}
-.btn {
-    width: 265px;
-    margin-left: -20px;
-}
-h2 {
-    margin-left: -10px;
-    padding-bottom: 40px;
-}
+    }
+    .btn {
+        width: 265px;
+        margin-left: -20px;
+    }
+    h2 {
+        margin-left: -10px;
+        padding-bottom: 40px;
+    }
+    }
