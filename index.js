@@ -17,20 +17,24 @@ var loNumsSpecial = "abcdefghijklmnopqrstuvwxyz0123456789!#$%&'()*+,-./:;<=>?@[\
 var upNumsSpecial = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 var allChar = "abcdefghijklmnopqrstuvwxyz!#$%&'()*+,-./:;<=>0123456789?@[\]^_`{|}~ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var userLength = "";
-var pass = "";
+
 
 
 
 
 
 function genPassword() {
+    
+    var pass = "";
+    
 
     userLength = prompt('Please enter a length from 8 to 128 :');
     if (userLength < 8 || userLength > 128) {
-        alert("Please , reload the page and enter from 8 to 128 characters");
+        alert("You must enter from 8 to 128 characters. Please click  the Generate Password button and try again.");
        
     }
     else {
+    
     var userChoices1 = confirm('Would you like your password to contain Lower Case Letters?');
     var userChoices2 = confirm('Would you like your password to contain Upper Case Letters?');
     var userChoices3 = confirm('Would you like your password to contain Numbers?');
@@ -38,7 +42,7 @@ function genPassword() {
 
     if (userChoices1 === true && userChoices2 === false && userChoices3 === false && userChoices4 === false) {
         for (var i = 0; i < userLength; i++) {
-            pass += loCase.charAt(Math.floor(Math.random() * Math.floor(loCase.length - 1)));
+            pass += loCase.charAt(Math.floor(Math.random() * Math.floor(loCase.length - 1)));            
             
         }
     }
@@ -113,9 +117,11 @@ function genPassword() {
         }
     }
 }
-    document.getElementById("passOutput").value = pass;
+    document.getElementById("passOutput").value = pass; 
+    
     
 }
+
 
 
 
